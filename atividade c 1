@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+    float consumo, soma = 0, media_geral;
+
+    for (i = 1; i <= 5; i++) {
+        printf("Digite o consumo mensal de agua do morador %d (em m3): ", i);
+        scanf("%f", &consumo);
+
+        soma += consumo;
+
+        if (consumo <= 20) {
+            printf("Morador %d: Consumo dentro da media (<= 20 m3).\n\n", i);
+        } else {
+            printf("Morador %d: Consumo acima da media (> 20 m3).\n\n", i);
+        }
+    }
+
+    media_geral = soma / 5;
+    printf("--- Resultado Final ---\n");
+    printf("O consumo medio geral do condominio e de: %.2f m3\n", media_geral);
+
+    return 0;
+}
